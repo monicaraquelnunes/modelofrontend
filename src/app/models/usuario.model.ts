@@ -5,4 +5,5 @@ export interface Usuario {
   email: string;
   endereco: string;
   telefone: string;
+  ativo?: boolean;
 }

@@ -31,4 +31,8 @@ export class UsuarioService {
   excluir(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+
+  atualizarStatus(id: number, ativo: boolean): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/${id}/ativo?ativo=${ativo}`, {});
+}
 }
